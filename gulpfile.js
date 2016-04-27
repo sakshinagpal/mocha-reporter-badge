@@ -14,18 +14,14 @@ gulp.task('mkdir-build', function(callback){
 });
 
 gulp.task('test-badge', ['mkdir-build'], function(callback) {
-		console.log('mkdir-build passed');
   exec('./node_modules/mocha/bin/_mocha --reporter ../../../index.js > build/mocha-badge.svg', callback);
 });
 
 gulp.task('git-config', function(callback){
-		console.log('test-badge passed');
 	exec('git config --global user.email "sakshi.nagpal@comprotechnologies.com" && git config --global user.name "sakshinagpal"', callback);
 });
 
 gulp.task('deploy-build', ['test-badge', 'git-config'], function() {
-		console.log('tgit-config passed');
-		console.log(process.env.GH_TOKEN);
 	var deployOptions = {
 		cacheDir: './build/repos/mocha-reporter-badge'
 	};
