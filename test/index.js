@@ -1,4 +1,5 @@
 var events = require('events');
+var expect    = require("chai").expect;
 
 var BadgeReporter = require('../');
 var runner = new events.EventEmitter();
@@ -25,6 +26,6 @@ describe('mocha badge reporter', function() {
 		stopCapture();
 	});
 	 it('should return -1 when the value is not present', function () {
-	        
+	        expect(foo).to.equal('bar');
     	});
 });
