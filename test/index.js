@@ -1,9 +1,9 @@
 var events = require('events');
 var expect    = require("chai").expect;
 
-var BadgeReporter = require('../');
-var runner = new events.EventEmitter();
-new BadgeReporter(runner);
+//var BadgeReporter = require('../');
+//var runner = new events.EventEmitter();
+//new BadgeReporter(runner);
 
 var capture = '';
 var oldWrite = process.stdout.write;
