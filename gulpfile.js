@@ -18,9 +18,20 @@ gulp.task('test-badge', ['mkdir-build'], function(callback) {
 });
 
 gulp.task('git-config', function(callback){
+	 console.log('test-badge');
 	exec('git config --global user.email "sakshi.nagpal@comprotechnologies.com" && git config --global user.name "sakshinagpal"', callback);
 });
 
-gulp.task('deploy-build', ['test-badge']);
+gulp.task('deploy-build', ['test-badge', 'git-config'], function() {
+	var deployOptions = {
+		cacheDir: './build/repos/mocha-reporter-badge'
+	};
+	if (process.env.GH_TOKEN) {
+		console.log('"githubToken" environment variable found, use it to authenticate to github');
+		deployOptions.remoteUrl = 'https://' + process.env.GH_TOKEN + '@github.com/sakshinagpal/mocha-reporter-badge';
+	}
+	return gulp.src('./build/**/*')
+		.pipe(deploy(deployOptions));
+});
 
 gulp.task('default', ['test-badge']);
