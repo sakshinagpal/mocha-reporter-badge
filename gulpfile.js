@@ -18,7 +18,7 @@ gulp.task('test-badge', ['mkdir-build'], function(callback) {
 });
 
 gulp.task('git-config', function(callback){
-	exec('git config --global user.email "alban.mouton@gmail.com" && git config --global user.name "Alban Mouton through Travis-CI"', callback);
+	exec('git config --global user.email "sakshi.nagpal@comprotechnologies.com" && git config --global user.name "sakshinagpal"', callback);
 });
 
 gulp.task('deploy-build', ['test-badge', 'git-config'], function() {
@@ -27,7 +27,7 @@ gulp.task('deploy-build', ['test-badge', 'git-config'], function() {
 	};
 	if (process.env.githubToken) {
 		console.log('"githubToken" environment variable found, use it to authenticate to github');
-		deployOptions.remoteUrl = 'https://' + process.env.githubToken + '@github.com/albanm/mocha-reporter-badge';
+		deployOptions.remoteUrl = 'https://' + process.env.githubToken + '@github.com/sakshinagpal/mocha-reporter-badge';
 	}
 	return gulp.src('./build/**/*')
 		.pipe(deploy(deployOptions));
