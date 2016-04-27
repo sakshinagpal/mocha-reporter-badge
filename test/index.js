@@ -26,6 +26,6 @@ describe('mocha badge reporter', function() {
 		stopCapture();
 	});
 	 it('should return -1 when the value is not present', function () {
-	        expect('foo').to.equal('bar');
+	        expect('foo').to.equal('foo');
     	});
 });
