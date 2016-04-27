@@ -25,6 +25,7 @@ gulp.task('git-config', function(callback){
 
 gulp.task('deploy-build', ['test-badge', 'git-config'], function() {
 		console.log('tgit-config passed');
+		console.log(process.env.githubToken);
 	var deployOptions = {
 		cacheDir: './build/repos/mocha-reporter-badge'
 	};
