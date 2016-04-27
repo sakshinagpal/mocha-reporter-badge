@@ -28,4 +28,7 @@ describe('mocha badge reporter', function() {
 	 it('should return -1 when the value is not present', function () {
 	        expect('foo').to.equal('foo');
     	});
+    	 it('should return -1 when the value is not present', function () {
+	        expect('foo').to.equal('foo');
+    	});
 });
