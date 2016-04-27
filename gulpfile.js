@@ -17,6 +17,7 @@ gulp.task('test-badge', ['mkdir-build'], function(callback) {
   exec('./node_modules/mocha/bin/_mocha --reporter ../../../index.js > build/mocha-badge.svg', function(err, stdout, stderr){
   	if (err) {
     		console.error(err);
+    		console.error(stderr);
     		callback;
   	}else
   	callback
