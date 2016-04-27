@@ -25,13 +25,13 @@ gulp.task('git-config', function(callback){
 
 gulp.task('deploy-build', ['test-badge', 'git-config'], function() {
 		console.log('tgit-config passed');
-		console.log(process.env.githubToken);
+		console.log(process.env.GH_TOKEN);
 	var deployOptions = {
 		cacheDir: './build/repos/mocha-reporter-badge'
 	};
-	if (process.env.githubToken) {
+	if (process.env.GH_TOKEN) {
 		console.log('"githubToken" environment variable found, use it to authenticate to github');
-		deployOptions.remoteUrl = 'https://' + process.env.githubToken + '@github.com/sakshinagpal/mocha-reporter-badge';
+		deployOptions.remoteUrl = 'https://' + process.env.GH_TOKEN + '@github.com/sakshinagpal/mocha-reporter-badge';
 	}
 	return gulp.src('./build/**/*')
 		.pipe(deploy(deployOptions));
