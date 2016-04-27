@@ -18,7 +18,7 @@ function stopCapture() {
 }
 
 describe('mocha badge reporter', function() {
-	it('should register test passes and failures then emit a badge on stdout', function(){
+	xit('should register test passes and failures then emit a badge on stdout', function(){
 		startCapture();
 		runner.emit('pass');
 		runner.emit('fail');
