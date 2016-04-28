@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var deploy = require('gulp-gh-pages');
-var exec = require('gulp-exec');
+var exec = require('child_process').exec;
 var fs = require('fs');
 
 gulp.task('mkdir-build', function(callback){
@@ -14,12 +14,11 @@ gulp.task('mkdir-build', function(callback){
 });
 
 gulp.task('test-badge', ['mkdir-build'], function(callback) {
-  exec('./node_modules/mocha/bin/_mocha --reporter ../../../index.js > build/mocha-badge.svg',callback);
+  exec('./node_modules/mocha/bin/_mocha --reporter ../../../index.js > build/mocha-badge.svg', callback);
 });
 
 gulp.task('git-config', function(callback){
-	 console.log('test-badge');
-	exec('git config --global user.email "sakshi.nagpal@comprotechnologies.com" && git config --global user.name "sakshinagpal"',callback);
+	exec('git config --global user.email "sakshi.nagpal@comprotechnologies.com" && git config --global user.name "sakshinagpal"', callback);
 });
 
 gulp.task('deploy-build', ['test-badge', 'git-config'], function() {
