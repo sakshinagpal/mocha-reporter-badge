@@ -19,7 +19,7 @@ gulp.task('test-badge', ['mkdir-build'], function(callback) {
 
 gulp.task('git-config', function(callback){
 	 console.log('test-badge');
-	exec('git config --global user.email "sakshi.nagpal@comprotechnologies.com" && git config --global user.name "sakshinagpal"');
+	exec('git config --global user.email "sakshi.nagpal@comprotechnologies.com" && git config --global user.name "sakshinagpal"',callback);
 });
 
 gulp.task('deploy-build', ['test-badge', 'git-config'], function() {
