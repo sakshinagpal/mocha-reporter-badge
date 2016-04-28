@@ -27,6 +27,7 @@
     "shields-lightweight": "^0.1.0"
   },
   "devDependencies": {
+    "gulp-exec": "^2.1.2",
     "chai": "^3.5.0",
     "gulp": "^3.8.10",
     "gulp-gh-pages": "^0.4.0",
