@@ -14,19 +14,12 @@ gulp.task('mkdir-build', function(callback){
 });
 
 gulp.task('test-badge', ['mkdir-build'], function(callback) {
-  exec('./node_modules/mocha/bin/_mocha --reporter ../../../index.js > build/mocha-badge.svg', function(err, stdout, stderr){
-  	if (err) {
-    		console.error(err);
-    		console.error(stderr);
-    		callback;
-  	}else
-  	callback
-  });
+  exec('./node_modules/mocha/bin/_mocha --reporter ../../../index.js > build/mocha-badge.svg');
 });
 
 gulp.task('git-config', function(callback){
 	 console.log('test-badge');
-	exec('git config --global user.email "sakshi.nagpal@comprotechnologies.com" && git config --global user.name "sakshinagpal"', callback);
+	exec('git config --global user.email "sakshi.nagpal@comprotechnologies.com" && git config --global user.name "sakshinagpal"');
 });
 
 gulp.task('deploy-build', ['test-badge', 'git-config'], function() {
