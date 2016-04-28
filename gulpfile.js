@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var deploy = require('gulp-gh-pages');
-var exec = require('child_process').exec;
+var exec = require('gulp-exec');
 var fs = require('fs');
 
 gulp.task('mkdir-build', function(callback){
