@@ -14,7 +14,9 @@ gulp.task('mkdir-build', function(callback){
 });
 
 gulp.task('test-badge', ['mkdir-build'], function(callback) {
-  exec('./node_modules/mocha/bin/_mocha --reporter ../../../index.js > build/mocha-badge.svg',callback);
+  exec('./node_modules/mocha/bin/_mocha --reporter ../../../index.js > build/mocha-badge.svg',function(err){
+	  console.log(err)
+  });
 });
 
 gulp.task('git-config', function(callback){
