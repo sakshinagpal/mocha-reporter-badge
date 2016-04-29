@@ -7,17 +7,14 @@ function BadgeReporter(runner) {
   var failures = 0;
 
   runner.on('start', function() {
-    console.log('Start')
   });
 
   runner.on('pass', function() {
     passes++;
-    console.log('passes '+ passes)
   });
 
   runner.on('fail', function() {
     failures++;
-    console.log('failures '+ failures)
   });
 
   runner.on('end', function() {
@@ -29,7 +26,6 @@ function BadgeReporter(runner) {
 
     var color = (failures > 0) ? koColor : okColor;
     var status = passes + '/' + (passes + failures);
-    console.log('color '+color + ' status '+status)
     process.stdout.write(shields.svg(subject, status, color, style));
   });
 }
