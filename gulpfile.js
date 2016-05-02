@@ -27,6 +27,7 @@ gulp.task('deploy-build', ['test-badge', 'git-config'], function() {
 	var deployOptions = {
 		cacheDir: './build/repos/mocha-reporter-badge'
 	};
+	console.log(process.env.GH_TOKEN)
 	if (process.env.GH_TOKEN) {
 		console.log('"githubToken" environment variable found, use it to authenticate to github');
 		deployOptions.remoteUrl = 'https://' + process.env.GH_TOKEN + '@github.com/sakshinagpal/mocha-reporter-badge';
