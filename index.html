@@ -14,15 +14,15 @@
       <div class="container">
         <div class="report-info-cnt">
           <h1 class="report-title">reader-e2e</h1>
-          <h3 class="report-date">Tuesday, May 3 2016, 05:12am</h3>
+          <h3 class="report-date">Tuesday, May 3 2016, 05:41am</h3>
         </div>
         <div class="quick-summary-cnt">
             <ul class="list-unstyled quick-summary">
-              <li class="qs-item summary-duration" title="Duration">15.272<span>S</span></li>
+              <li class="qs-item summary-duration" title="Duration">27.912<span>S</span></li>
               <li class="qs-item summary-suites" title="Suites">1</li>
-              <li class="qs-item summary-tests" title="Tests">1</li>
+              <li class="qs-item summary-tests" title="Tests">2</li>
               <li class="qs-item summary-passes" title="Passed" data-filter="passed">1</li>
-              <li class="qs-item summary-failures" title="Failed" data-filter="failed">0</li>
+              <li class="qs-item summary-failures" title="Failed" data-filter="failed">1</li>
               <li class="qs-item summary-pending" title="Pending" data-filter="pending">0</li>
             </ul>        </div>
       </div>
@@ -33,7 +33,7 @@
       <div class="container">
           <div class="row">
             <div class="summary-col summary-duration">
-              <h1 class="summary-count">15.272<span>S</span></h1>
+              <h1 class="summary-count">27.912<span>S</span></h1>
               <h4 class="summary-label">S</h4>
             </div>
             <div class="summary-col summary-suites" title="Suites">
@@ -41,15 +41,15 @@
               <h4 class="summary-label">Suite</h4>
             </div>
             <div class="summary-col summary-tests" title="Tests">
-              <h1 class="summary-count">1</h1>
-              <h4 class="summary-label">Test</h4>
+              <h1 class="summary-count">2</h1>
+              <h4 class="summary-label">Tests</h4>
             </div>
             <div class="summary-col summary-passes" data-filter="passed" title="Passed">
               <h1 class="summary-count">1</h1>
               <h4 class="summary-label">Passed</h4>
             </div>
             <div class="summary-col summary-failures" data-filter="failed" title="Failed">
-              <h1 class="summary-count">0</h1>
+              <h1 class="summary-count">1</h1>
               <h4 class="summary-label">Failed</h4>
             </div>
             <div class="summary-col summary-pending" data-filter="pending" title="Pending">
@@ -62,45 +62,69 @@
       <div class="container">
           <div class="row">
             <div class="status-item status-item-pending-pct">0% Pending</div>
-            <div class="status-item status-item-passing-pct success">100% Passing</div>
+            <div class="status-item status-item-passing-pct danger">50% Passing</div>
           </div>      </div>
     </div>
 
     <!-- Suites -->
     <div class="details container">
             <section class="suite-wrap">
-          <div id="0f679794-8657-4682-87f8-9bed6e48581b" class="suite has-tests has-passed">
-            <h3 class="suite-title">DLS</h3>
+          <div id="3577e309-ab1a-487f-a1ee-faf502d161ff" class="suite has-tests has-passed has-failed">
+            <h3 class="suite-title">DLS - Login Page</h3>
             <h5 class="suite-filename">/tests/e2e/specs/LoginTest</h5>
             <!-- Suite Chart -->
             <div class="suite-chart-wrap">
-              <canvas id="0f679794-8657-4682-87f8-9bed6e48581b" class="suite-chart" width="50" height="50" data-total-passes="1" data-total-failures="0" data-total-pending="0" data-total-skipped="0"></canvas>
+              <canvas id="3577e309-ab1a-487f-a1ee-faf502d161ff" class="suite-chart" width="50" height="50" data-total-passes="1" data-total-failures="1" data-total-pending="0" data-total-skipped="0"></canvas>
             </div>
             <div class="suite-data-wrap">
               <!-- Suite Summary -->
               <ul class="suite-summary list-unstyled">
-                <li class="suite-summary-item duration">15.265 s</li>
-                <li class="suite-summary-item tests">1</li>
+                <li class="suite-summary-item duration">27.904 s</li>
+                <li class="suite-summary-item tests">2</li>
                 <li class="suite-summary-item passed">1</li>
-                <li class="suite-summary-item failed">0</li>
+                <li class="suite-summary-item failed">1</li>
                 <li class="suite-summary-item pending">0</li>
               </ul>
               <!-- Test Info -->
               <div class="suite-test-wrap">
-                <div class="suite-test-header" data-toggle="collapse" data-target="#0f679794-8657-4682-87f8-9bed6e48581b-test-list">
+                <div class="suite-test-header" data-toggle="collapse" data-target="#3577e309-ab1a-487f-a1ee-faf502d161ff-test-list">
                   <h4 class="suite-test-header-title">Tests</h4>
                 </div>
-                <div id="0f679794-8657-4682-87f8-9bed6e48581b-test-list" class="list-group test-list collapse in">
-                    <div id="86168d78-339b-4b96-9de0-fdc1d7b5dd56" class="list-group-item test passed">
+                <div id="3577e309-ab1a-487f-a1ee-faf502d161ff-test-list" class="list-group test-list collapse in">
+                    <div id="b410abad-6f32-45c3-97af-35ee90f6d109" class="list-group-item test failed">
           <!-- Test Heading -->
           <div class="test-heading">
             <h4 class="test-title">
               <span class="text-muted hidden"> it </span>
-              Test Login Feature 1
+              Test Login page with incorrect credentials
             </h4>
             <div class="pull-right">
-              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#86168d78-339b-4b96-9de0-fdc1d7b5dd56 > .test-code.collapse">Code</button>
-              <span class="test-duration slow">15.265 s</span>
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#b410abad-6f32-45c3-97af-35ee90f6d109 > .test-code.collapse">Code</button>
+              <span class="test-duration ">12.913 s</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+            <p class="test-error-message">Expected element &lt;*[data-ng-show=invalideCredential]&gt; text to equal: &quot;Invalid Credential&quot;: Expected element &lt;*[data-ng-show=invalideCredential]&gt; text to equal: &quot;Invalid Credential&quot; - Expected &quot;equal &#x27;Invalid Credential&#x27;&quot; but got: &quot;Invalid Credentials&quot;
+              <button class="btn btn-link btn-sm toggle-btn toggle-stack collapsed" data-toggle="collapse" data-target="#b410abad-6f32-45c3-97af-35ee90f6d109 > .test-error-stack.collapse">Stack</button>
+            </p>
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small"><span class="hljs-keyword">var</span> readerHome = client.page.LoginPage();<br>readerHome.navigate(client.launch_url);<br>readerHome.login(<span class="hljs-string">'qa8'</span>,<span class="hljs-string">'admin1'</span>,<span class="hljs-string">'Compro11'</span>);<br>readerHome.expect.element(<span class="hljs-string">'@credentialsAlert'</span>).text.to.equal(<span class="hljs-string">'Invalid Credential'</span>);<br>client.end();</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+          <div class="test-error-stack collapse">
+            <pre><code class="hljs small">    at <span class="hljs-built_in">Object</span>.element (node_modules/nightwatch/lib/page-object/command-wrapper.js:<span class="hljs-number">103</span>:<span class="hljs-number">25</span>)<br>    at Context.&lt;anonymous&gt; (tests/e2e/specs/LoginTest.js:<span class="hljs-number">6</span>:<span class="hljs-number">27</span>)</code></pre>
+          </div>
+        </div>            <div id="7d9f1bf9-42ba-40dd-a00d-5b83ac99f4d0" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              Test Login page with correct credentials
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#7d9f1bf9-42ba-40dd-a00d-5b83ac99f4d0 > .test-code.collapse">Code</button>
+              <span class="test-duration slow">14.991 s</span>
             </div>
           </div>
           <!-- Test Errors -->
